@@ -166,7 +166,7 @@ class FakeCurrencyEngine {
     return Promise.resolve()
   }
 
-  dumpData(): EdgeDataDump {
+  dumpData(): Promise<EdgeDataDump> {
     return {
       walletId: 'xxx',
       walletType: fakeCurrencyInfo.walletType,

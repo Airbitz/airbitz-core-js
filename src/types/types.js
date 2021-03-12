@@ -494,7 +494,7 @@ export type EdgeCurrencyEngine = {
   startEngine(): Promise<mixed>,
   killEngine(): Promise<mixed>,
   resyncBlockchain(): Promise<mixed>,
-  dumpData(): EdgeDataDump,
+  dumpData(): Promise<EdgeDataDump>,
 
   // Chain state:
   getBlockHeight(): number,
