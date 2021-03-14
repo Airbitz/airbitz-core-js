@@ -233,9 +233,7 @@ export function makeCurrencyWalletApi(
 
       let state = input.props.selfState
       if (!state.gotTxs[currencyCode]) {
-        const txs = await engine.getTransactions({
-          currencyCode: opts.currencyCode
-        })
+        const txs = await engine.getTransactions(opts)
         fakeCallbacks.onTransactionsChanged(txs)
         input.props.dispatch({
           type: 'CURRENCY_ENGINE_GOT_TXS',
